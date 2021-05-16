@@ -1,0 +1,4 @@
+"C:\Program Files\Git\bin\sh.exe" --login -i
+
+git commit -m ""
+git push origin master
