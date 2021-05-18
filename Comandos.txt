@@ -1,4 +1,6 @@
 "C:\Program Files\Git\bin\sh.exe" --login -i
 
+git add 
+git add gestao_rh/settings.py
 git commit -m ""
 git push origin master
