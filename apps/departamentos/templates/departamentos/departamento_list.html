@@ -1,18 +1,31 @@
 {% extends 'base.html' %}
 
+
 {% block main %}
-
-	List
+<h3>Lista de empresas</h3>
 	<br>
-	{% for departamento in object_list %}
-		<a href="{% url 'update_departamento' departamento.id %}">
-			{{ departamento }}
-		</a>
-		<a href="{% url 'delete_departamento' departamento.id %}">Eliminar</a>
-<br>
-    {% endfor %}
-
 	<a href="{% url 'create_departamento' %}" class="btn btn-info">Novo</a>
+	<br>
 
-
+<table class="table">
+    <thead>
+	    <tr>
+	        <th scope="col">Empresa</th>
+	    </tr>
+    </thead>
+	{% for departamento in object_list %}
+	<tbody>
+	    <tr>
+	        <td>
+		        <a href="{% url 'update_departamento' departamento.id %}">
+					{{ departamento }}
+				</a>
+	            <a href="{% url 'delete_departamento' departamento.id %}">
+		            Eliminar
+	            </a>
+	        </td>
+	    </tr>
+	</tbody>
+	{% endfor %}
+</table>
 {% endblock %}
