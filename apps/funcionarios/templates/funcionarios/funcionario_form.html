@@ -2,14 +2,14 @@
 
 {% block main %}
 
-	Editar
-	<form method="POST">
-		{% csrf_token %}
-		
-		{{ form }}
-		
-		<button type="submit">Guardar</button>
-	</form>
+Editar
+<form method="POST">
+	{% csrf_token %}
+	
+	{{ form }}
+	
+	<button type="submit">Guardar</button>
+</form>
 
 
 {% endblock %}
