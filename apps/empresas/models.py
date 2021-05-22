@@ -1,4 +1,8 @@
+from audioop import reverse
+
 from django.db import models
+from django.urls import reverse
+from django.shortcuts import redirect
 
 
 class Empresa(models.Model):
@@ -7,3 +11,6 @@ class Empresa(models.Model):
 
     def __str__(self):
         return self.nome
+
+    def get_absolute_url (self):
+        return reverse('home')
