@@ -6,13 +6,14 @@
             One of three columns
         </div>
         <div class="col-sm">
-            Olá {{ utilizador.funcionario.nome }}
-            <a href="{% url 'list_funcionarios' %}">Gerir funcionários</a>
-	        <a href="{% url 'list_departamentos' %}">Gerir departamentos</a>
+            Olá {{ utilizador.funcionario.nome }}<br>
+            <a href="{% url 'list_funcionarios' %}">Gerir funcionários</a><br>
+	        <a href="{% url 'list_departamentos' %}">Gerir departamentos</a><br>
+	        <a href="{% url 'list_hora_extra' %}">Gerir banco de horas</a>
         </div>
         <div class="col-sm">
             <a href="{% url 'logout' %}">Logout</a>
-
+			<br>
             {% if utilizador.funcionario.empresa %}
                 <a href="{% url 'edit_empresa' utilizador.funcionario.empresa.id %}">Editar empresa</a>
             {% else %}
