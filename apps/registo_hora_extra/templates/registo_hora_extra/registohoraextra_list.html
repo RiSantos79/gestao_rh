@@ -19,7 +19,9 @@
 	<tbody>
 	    <tr>
 	        <td>
-		        {{ registo_re }}
+		        <a href="{% url 'update_hora_extra' registo_re.id %}">
+		            {{ registo_re }}
+		        </a>
 	        </td>
 		    
 	    </tr>

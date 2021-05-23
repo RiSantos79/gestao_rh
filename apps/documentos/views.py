@@ -1,4 +1,4 @@
-from .models import Documento, Funcionario
+from .models import Documento
 from django.views.generic import CreateView
 
 

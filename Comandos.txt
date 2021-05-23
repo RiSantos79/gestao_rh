@@ -1,6 +1,9 @@
 "C:\Program Files\Git\bin\sh.exe" --login -i
+%SystemRoot%\system32\cmd.exe
 
-git add 
-git add gestao_rh/settings.py
-git commit -m ""
+git add .
+git commit -m "NOME"
 git push origin master
+
+
+git add gestao_rh/settings.py

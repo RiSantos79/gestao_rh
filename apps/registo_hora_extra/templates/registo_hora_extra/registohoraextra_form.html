@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load bootstrap %}
+
+{% block main %}
+
+<h3>Editar funcionário</h3>
+<form method="POST">
+	{% csrf_token %}
+	
+	{{ form|bootstrap }}
+	
+	<button type="submit">Guardar</button>
+</form>
+
+
+{% endblock %}
