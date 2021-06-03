@@ -4,7 +4,7 @@ from django.views.generic import (
     ListView,
     UpdateView,
     DeleteView,
-    CreateView,
+    CreateView
 )
 
 from .models import Funcionario

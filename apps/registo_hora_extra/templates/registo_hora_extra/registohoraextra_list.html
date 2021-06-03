@@ -4,14 +4,17 @@
 {% block main %}
 <h3>Banco de horas</h3>
 	<br>
-<!--	<a href="{% url 'create_funcionario' %}" class="btn btn-info">Novo</a>-->
+	<a href="{% url 'create_registo_hora_extra' %}" class="btn btn-info">Novo</a>
 	<br>
 
 <table class="table">
     <thead>
 	    <tr>
 	        <th scope="col">
-		        Funcionário
+		        Motivo
+	        </th>
+		    <th scope="col">
+		        Ação
 	        </th>
 	    </tr>
     </thead>
@@ -23,7 +26,11 @@
 		            {{ registo_re }}
 		        </a>
 	        </td>
-		    
+		    <td>
+		        <a href="{% url 'delete_hora_extra' registo_re.id %}">
+		            Eliminar
+		        </a>
+	        </td>
 	    </tr>
 	</tbody>
 	{% endfor %}

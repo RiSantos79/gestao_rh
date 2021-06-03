@@ -11,6 +11,7 @@
     <thead>
 	    <tr>
 	        <th scope="col">Empresa</th>
+		    <th scope="col">Ação</th>
 	    </tr>
     </thead>
 	{% for departamento in object_list %}
@@ -20,6 +21,8 @@
 		        <a href="{% url 'update_departamento' departamento.id %}">
 					{{ departamento }}
 				</a>
+	        </td>
+	        <td>
 	            <a href="{% url 'delete_departamento' departamento.id %}">
 		            Eliminar
 	            </a>

@@ -3,13 +3,19 @@
 
 {% block main %}
 
-<h3>Editar funcionário</h3>
+<h3>Editar horas extra</h3>
 <form method="POST">
 	{% csrf_token %}
 	
 	{{ form|bootstrap }}
+	<br>
+	<button type="submit" class="btn btn-success">Guardar</button>
 	
-	<button type="submit">Guardar</button>
+	{% if object %}
+		<a href="{% url 'delete_hora_extra' object.id %}" class="btn btn-danger">
+			Eliminar
+		</a>
+	{% endif %}
 </form>
 
 
